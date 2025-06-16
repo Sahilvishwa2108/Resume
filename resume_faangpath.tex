@@ -1,0 +1,115 @@
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.3 in,top=0.3in,right=0.3 in,bottom=0.3in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Sahil Vishwakarma} % Your name
+% You can merge both of these into a single line, if you do not have a website.
+\address{3rd Year UG, Computer Science Engineering} 
+\address{\href{mailto:sahilvishwa2108@gmail.com}{sahilvishwa2108@gmail.com} | +91 7440207015 | \href{https://linkedin.com/in/sahilvishwa2108}{linkedin.com/in/sahilvishwa2108} | \href{https://github.com/Sahilvishwa2108}{github.com/Sahilvishwa2108} | LeetCode | Bhopal}  %
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+\vspace{-0.5em}
+{\bf Lakshmi Narain College of Technology, Bhopal} \hfill {Expected July 2026}\\
+\vspace{-0.3em}B. Tech in Computer Science Engineering \hfill {8.12 CGPA}
+
+\vspace{-0.3em}{\bf Jawahar Navodaya Vidyalaya, Sagar} \hfill {April 2021}\\
+\vspace{-0.3em}XII (CBSE) with Computer Science \hfill {91.6\%}
+
+\vspace{-0.3em}{\bf Jawahar Navodaya Vidyalaya, Sagar} \hfill {April 2019}\\
+\vspace{-0.3em}X (CBSE) \hfill {92.4\%}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+% TECHINICAL STRENGTHS	
+%----------------------------------------------------------------------------------------
+\begin{rSection}{SKILLS}
+\vspace{-0.5em}
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
+Languages & Java, JavaScript, TypeScript, SQL, Git, HTML, CSS
+\\
+Developer Tools & Node.js, GitHub Actions, MongoDB, Prisma, PostgreSQL, Postman, Redis, Linux, Docker, Packet Tracer
+\\
+Libraries/Frameworks & Next.js, React.js, Tailwind CSS, Framer motion, Three.js
+\\
+Core Subjects & OOPs, DBMS, Operating Systems, Computer Networks
+\\
+\end{tabular}\\
+\end{rSection}
+
+\begin{rSection}{EXPERIENCE}
+\vspace{-0.5em}
+\textbf{Freelance Full Stack Developer} \hfill March 2025 | April 2025\\
+Mukul Verma \& Co. \hfill \textit{Remote}
+ \begin{itemize}
+    \itemsep -4pt {} 
+     \item Built an office management SaaS with task delegation, client/user management, real-time chat, and history tracking.
+     \item Designed multi-tier RBAC and role-based dashboards with tailored analytics, feeds, and task overviews.
+     \item Implemented core workflows for task assignment, priority, billing approval, status tracking, and notifications.
+     \item Ensured reliability with validation, error handling, audit logging, and background jobs for expiry, cleanup, and maintenance.
+ \end{itemize}
+
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{PROJECTS}
+\vspace{-1.5em}
+\item \textbf{Office Pilot | Workspace Management SaaS | Link |}
+\begin{itemize}
+    \itemsep -4pt {}
+    \item Built full-stack SaaS for task/client management using Next.js, TypeScript, Tailwind, Prisma, PostgreSQL, Redis, Cloudinary, and more.
+    \item Designed typed-enum M2M schema; improved performance with debounced search, Lazy loading, SSR, and cursor-based pagination.
+    \item Implemented real-time chatroom and notification system via Redis pub/sub; automated workflows using queue-based cron jobs.
+    \item Secured app with RBAC, memoization, and cache invalidation; added circular logging and multi-level caching for reliability.
+    \item Delivered responsive UI with theme toggle, local storage, and full-screen UX enhancements.
+\end{itemize}
+\vspace{-0.5em}
+\item \textbf{True Feedback | AI Powered PWA | Link |}
+\begin{itemize}
+    \itemsep -4pt {}
+    \item Built anonymous feedback collection platform using Next.js, React, TypeScript with OAuth, OTP validation, JWT, NextAuth and bcrypt.
+    \item Integrated OpenAI API and Vercel AI SDK for AI-generated suggestions and category-wise feedback filtering.
+    \item Designed a fully animated, responsive UI using Tailwind CSS, Framer Motion, and Lucide-react for an engaging experience.
+    \item Handled secure feedback storage and dashboard updates via MongoDB/Mongoose; validated forms with Zod \& React Hook Form.
+\end{itemize}
+\vspace{-0.5em}
+\item \textbf{Oil Spill Detection System | Group Project | Link |}
+\begin{itemize}
+    \itemsep -4pt {}
+    \item Developed ML inference pipeline (U-Net, DeepLabV3+) using Python \& FastAPI, integrated with Hugging Face for 95\%+ accuracy.
+    \item Designed a dashboard in Next.js 15 (SSR) to visualize segmentation of oil spills and confidence scores.
+    \item Containerized the backend using Docker and deployed it on Render, with optimized image pipelines, and secure CORS configuration.
+    \item Set up CI/CD workflows via GitHub Actions for linting, Docker builds, and auto-deploy to Vercel and Render.
+\end{itemize}
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Certifications}
+\vspace{-0.5em}
+\textbf{NPTEL:} Programming in Java | Database Management System | Computer Networks | Python Essentials 1 | Python Essentials 2 \\
+\textbf{AWS:} Cloud Foundation Certifications \\
+\textbf{Cisco:} CCNA Certifications | Introduction to Cyber Security
+\end{rSection}
+
+%----------------------------------------------------------------------------------------
+\begin{rSection}{Achievements}
+\vspace{-0.5em}
+\begin{itemize}
+    \itemsep -4pt {}
+    \item Contributed to innovative solutions during SIH 2024 and other Hackathons, emphasizing teamwork and coding expertise.
+    \item Secured AIR 1864 in AINCAT (All India Naukri Campus Aptitude Test) - 2025
+\end{itemize}
+\end{rSection}
+
+
+\end{document}

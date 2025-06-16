@@ -34,16 +34,16 @@
 %----------------------------------------------------------------------------------------
 % CUSTOM SPACING AND SIZING
 %----------------------------------------------------------------------------------------
-\def\namesize{\Large\bfseries} % Reduced name size
-\def\titlesize{\normalsize} % Smaller job title
-\def\sectionsize{\normalsize\bfseries} % Smaller section headers
+\def\namesize{\LARGE\bfseries} % Larger, more prominent name
+\def\titlesize{\large\itshape} % Slightly larger, italicized job title for elegance
+\def\sectionsize{\normalsize\bfseries} % Section headers
 \def\subsectionsize{\normalsize\bfseries} % Subsection headers
 
 % Tight spacing definitions for single page
-\def\nameskip{\vspace{2pt}}
-\def\sectionskip{\vspace{4pt}}
-\def\subsectionskip{\vspace{2pt}}
-\def\itemskip{\vspace{1pt}}
+\def\nameskip{\vspace{1pt}}
+\def\sectionskip{\vspace{2pt}}
+\def\subsectionskip{\vspace{1pt}}
+\def\itemskip{\vspace{0pt}}
 
 %----------------------------------------------------------------------------------------
 % HEADER FORMATTING
@@ -54,25 +54,65 @@
 \def \jobtitle#1{\def\@jobtitle{#1}}
 \def \@jobtitle {}
 
-\def \contactinfo#1{\def\@contactinfo{#1}}
-\def \@contactinfo {}
+\def \email#1{\def\@email{#1}}
+\def \@email {}
 
-% Modern header layout
+\def \phone#1{\def\@phone{#1}}
+\def \@phone {}
+
+\def \location#1{\def\@location{#1}}
+\def \@location {}
+
+\def \linkedin#1{\def\@linkedin{#1}}
+\def \@linkedin {}
+
+\def \github#1{\def\@github{#1}}
+\def \@github {}
+
+\def \leetcode#1{\def\@leetcode{#1}}
+\def \@leetcode {}
+
+\def \portfolio#1{\def\@portfolio{#1}}
+\def \@portfolio {}
+
+% Compact centered header layout
 \def \printheader {
   \begin{center}
-    {\namesize \@name}
-    \vspace{1pt}
+    % Name with minimal spacing
+    {\namesize \@name} \\[1pt]
     
+    % Job title with tight spacing
     \ifx\@jobtitle\empty\else
-      {\titlesize \@jobtitle}
-      \vspace{1pt}
+      {\titlesize \@jobtitle} \\[2pt]
     \fi
-    
-    {\@contactinfo}
-    \vspace{4pt}
-    \hrule height 0.5pt
-    \vspace{4pt}
+      % Contact info in two compact lines
+    {\small
+      \ifx\@email\empty\else
+        \href{mailto:\@email}{\@email}
+      \fi
+      \ifx\@phone\empty\else
+        \ $\cdot$ \@phone
+      \fi
+      \ifx\@location\empty\else
+        \ $\cdot$ \@location
+      \fi
+      \\[1pt]
+      \ifx\@linkedin\empty\else
+        \href{\@linkedin}{linkedin.com/in/sahilvishwa2108}
+      \fi
+      \ifx\@github\empty\else
+        \ $\cdot$ \href{\@github}{github.com/Sahilvishwa2108}
+      \fi
+      \ifx\@portfolio\empty\else
+        \ $\cdot$ \href{https://\@portfolio}{Portfolio}
+      \fi
+      \ifx\@leetcode\empty\else
+        \ $\cdot$ \href{\@leetcode}{LeetCode}
+      \fi
+    }
   \end{center}
+  
+  \vspace{2pt}
 }
 
 %----------------------------------------------------------------------------------------

@@ -14,6 +14,7 @@
 \usepackage{enumitem} % Better list control
 \usepackage{tabularx} % Better table formatting
 \usepackage{calc} % For calculations
+\usepackage{amsmath} % For \boldsymbol and math symbols
 
 % Hyperlink setup - ATS compliant
 \usepackage{hyperref}
@@ -34,8 +35,8 @@
 %----------------------------------------------------------------------------------------
 % CUSTOM SPACING AND SIZING
 %----------------------------------------------------------------------------------------
-\def\namesize{\LARGE\bfseries} % Larger, more prominent name
-\def\titlesize{\large\itshape} % Slightly larger, italicized job title for elegance
+\def\namesize{\Huge\bfseries} % Even larger and bolder name for maximum prominence
+\def\titlesize{\large\itshape} % Medium subtitle with elegant styling
 \def\sectionsize{\normalsize\bfseries} % Section headers
 \def\subsectionsize{\normalsize\bfseries} % Subsection headers
 
@@ -75,44 +76,42 @@
 \def \portfolio#1{\def\@portfolio{#1}}
 \def \@portfolio {}
 
-% Compact centered header layout
+% Modern compact header layout
 \def \printheader {
   \begin{center}
-    % Name with minimal spacing
-    {\namesize \@name} \\[1pt]
+    % Large, prominent name
+    {\namesize \@name}
     
-    % Job title with tight spacing
-    \ifx\@jobtitle\empty\else
-      {\titlesize \@jobtitle} \\[2pt]
-    \fi
-      % Contact info in two compact lines
+    \vspace{2pt}
+    
+    % Contact info in two well-spaced lines with modern typography
     {\small
       \ifx\@email\empty\else
-        \href{mailto:\@email}{\@email}
+        \textbf{\href{mailto:\@email}{\@email}}
       \fi
       \ifx\@phone\empty\else
-        \ $\cdot$ \@phone
+        \ $\boldsymbol{\cdot}$ \textbf{\@phone}
       \fi
       \ifx\@location\empty\else
-        \ $\cdot$ \@location
+        \ $\boldsymbol{\cdot}$ \@location
       \fi
-      \\[1pt]
+      \\[2pt]
       \ifx\@linkedin\empty\else
-        \href{\@linkedin}{linkedin.com/in/sahilvishwa2108}
+        \href{\@linkedin}{\textbf{linkedin.com/in/sahilvishwa2108}}
       \fi
       \ifx\@github\empty\else
-        \ $\cdot$ \href{\@github}{github.com/Sahilvishwa2108}
+        \ $\boldsymbol{\cdot}$ \href{\@github}{\textbf{github.com/Sahilvishwa2108}}
       \fi
       \ifx\@portfolio\empty\else
-        \ $\cdot$ \href{https://\@portfolio}{Portfolio}
+        \ $\boldsymbol{\cdot}$ \href{https://\@portfolio}{\textbf{Portfolio}}
       \fi
       \ifx\@leetcode\empty\else
-        \ $\cdot$ \href{\@leetcode}{LeetCode}
+        \ $\boldsymbol{\cdot}$ \href{\@leetcode}{LeetCode}
       \fi
     }
   \end{center}
   
-  \vspace{2pt}
+  \vspace{3pt}
 }
 
 %----------------------------------------------------------------------------------------
@@ -162,8 +161,8 @@
 %----------------------------------------------------------------------------------------
 % PROJECT FORMATTING
 %----------------------------------------------------------------------------------------
-\newenvironment{rProject}[2]{
-  \textbf{#1} \hfill \textit{#2}
+\newenvironment{rProject}[3]{
+  \textbf{#1} \hfill \textit{\href{#2}{GitHub} $\boldsymbol{\cdot}$ \href{#3}{Live Demo}}
   \vspace{0pt}
   \begin{itemize}[leftmargin=12pt, itemsep=0pt, parsep=0pt]
 }{

@@ -161,13 +161,12 @@
 %----------------------------------------------------------------------------------------
 % PROJECT FORMATTING
 %----------------------------------------------------------------------------------------
-\newenvironment{rProject}[3]{
-  \textbf{#1} \hfill \textit{\href{#2}{GitHub} $\boldsymbol{\cdot}$ \href{#3}{Demo}}
+\newenvironment{rProject}[3]{  \textbf{#1} \hfill \textit{\href{#2}{GitHub} $\boldsymbol{\cdot}$ \href{#3}{Demo}}
   \vspace{0pt}
   \begin{itemize}[leftmargin=12pt, itemsep=0pt, parsep=0pt]
 }{
   \end{itemize}
-  \vspace{2pt}
+  \vspace{4pt}
 }
 
 %----------------------------------------------------------------------------------------

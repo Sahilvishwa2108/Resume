@@ -104,9 +104,8 @@
       \fi
       \ifx\@portfolio\empty\else
         \ $\boldsymbol{\cdot}$ \href{https://\@portfolio}{\textbf{Portfolio}}
-      \fi
-      \ifx\@leetcode\empty\else
-        \ $\boldsymbol{\cdot}$ \href{\@leetcode}{LeetCode}
+      \fi      \ifx\@leetcode\empty\else
+        \ $\boldsymbol{\cdot}$ \href{\@leetcode}{\textbf{LeetCode}}
       \fi
     }
   \end{center}

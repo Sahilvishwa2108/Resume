@@ -15,15 +15,16 @@
 \usepackage{tabularx} % Better table formatting
 \usepackage{calc} % For calculations
 \usepackage{amsmath} % For \boldsymbol and math symbols
+\usepackage{xcolor} % For color definitions
 
-% Hyperlink setup - ATS compliant
+% Hyperlink setup - ATS compliant with improved visibility
 \usepackage{hyperref}
 \hypersetup{
-    colorlinks=false,
+    colorlinks=true,
+    urlcolor=blue!60!black,
+    linkcolor=blue!60!black,
+    filecolor=blue!60!black,
     pdfborder={0 0 0},
-    urlcolor=black,
-    linkcolor=black,
-    filecolor=black,
     pdftitle={Sahil Vishwakarma - Resume},
     pdfauthor={Sahil Vishwakarma},
     pdfsubject={Software Engineer Resume},
@@ -31,6 +32,12 @@
 }
 
 \pagestyle{empty} % No page numbers for ATS
+
+%----------------------------------------------------------------------------------------
+% CUSTOM COMMANDS FOR HIGHLIGHTING
+%----------------------------------------------------------------------------------------
+% Command for highlighting technical keywords with slightly smaller font
+\newcommand{\techkw}[1]{\textbf{\small #1}}
 
 %----------------------------------------------------------------------------------------
 % CUSTOM SPACING AND SIZING
@@ -90,10 +97,10 @@
         \textbf{\href{mailto:\@email}{\@email}}
       \fi
       \ifx\@phone\empty\else
-        \ $\boldsymbol{\cdot}$ \textbf{\@phone}
+        \ $\boldsymbol{\cdot}$ \textbf{\href{tel:\@phone}{\@phone}}
       \fi
       \ifx\@location\empty\else
-        \ $\boldsymbol{\cdot}$ \@location
+        \ $\boldsymbol{\cdot}$ \textbf{\href{https://www.google.com/maps/search/\@location}{\@location}}
       \fi
       \\[2pt]
       \ifx\@linkedin\empty\else

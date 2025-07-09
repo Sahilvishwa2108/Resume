@@ -17,13 +17,13 @@
 \usepackage{amsmath} % For \boldsymbol and math symbols
 \usepackage{xcolor} % For color definitions
 
-% Hyperlink setup - ATS compliant with improved visibility
+% Hyperlink setup - ATS compliant with blue theme
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    urlcolor=blue!60!black,
-    linkcolor=blue!60!black,
-    filecolor=blue!60!black,
+    urlcolor={rgb:red,27;green,79;blue,114},
+    linkcolor={rgb:red,27;green,79;blue,114},
+    filecolor={rgb:red,27;green,79;blue,114},
     pdfborder={0 0 0},
     pdftitle={Sahil Vishwakarma - Resume},
     pdfauthor={Sahil Vishwakarma},
@@ -31,20 +31,26 @@
     pdfkeywords={Software Engineer, Full Stack Developer, JavaScript, React, Node.js}
 }
 
+% Define custom colors matching the reference resume
+\definecolor{namecolor}{RGB}{27,79,114}      % Deep blue for name
+\definecolor{sectioncolor}{RGB}{27,79,114}   % Deep blue for section headers
+\definecolor{linkcolor}{RGB}{46,134,171}     % Medium blue for links
+\definecolor{textcolor}{RGB}{0,0,0}          % Black for body text
+
 \pagestyle{empty} % No page numbers for ATS
 
 %----------------------------------------------------------------------------------------
 % CUSTOM COMMANDS FOR HIGHLIGHTING
 %----------------------------------------------------------------------------------------
-% Command for highlighting technical keywords with slightly smaller font
+% Command for highlighting technical keywords with black text
 \newcommand{\techkw}[1]{\textbf{\small #1}}
 
 %----------------------------------------------------------------------------------------
 % CUSTOM SPACING AND SIZING
 %----------------------------------------------------------------------------------------
-\def\namesize{\Huge\bfseries} % Even larger and bolder name for maximum prominence
+\def\namesize{\Huge\bfseries\color{namecolor}} % Large blue name
 \def\titlesize{\large\itshape} % Medium subtitle with elegant styling
-\def\sectionsize{\normalsize\bfseries} % Section headers
+\def\sectionsize{\normalsize\bfseries\color{sectioncolor}} % Blue section headers
 \def\subsectionsize{\normalsize\bfseries} % Subsection headers
 
 % Tight spacing definitions for single page

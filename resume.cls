@@ -48,7 +48,7 @@
 %----------------------------------------------------------------------------------------
 % CUSTOM SPACING AND SIZING
 %----------------------------------------------------------------------------------------
-\def\namesize{\Huge\bfseries\color{namecolor}} % Large blue name
+\def\namesize{\fontsize{28}{30}\selectfont\bfseries\color{namecolor}} % Larger blue name
 \def\titlesize{\large\itshape} % Medium subtitle with elegant styling
 \def\sectionsize{\normalsize\bfseries\color{sectioncolor}} % Blue section headers
 \def\subsectionsize{\normalsize\bfseries} % Subsection headers
@@ -97,8 +97,8 @@
     
     \vspace{2pt}
     
-    % Contact info in two well-spaced lines with modern typography
-    {\small
+  % Contact info in two well-spaced lines with modern typography (increased size)
+  {\normalsize
       \ifx\@email\empty\else
         \textbf{\href{mailto:\@email}{\@email}}
       \fi

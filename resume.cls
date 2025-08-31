@@ -1,23 +1,16 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Modern ATS-Compliant Resume Class
-% Optimized for both visual appeal and ATS parsing
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \ProvidesClass{resume}[2025/06/16 v2.0 Modern ATS Resume class]
 
-\LoadClass[10pt,letterpaper]{article} % Smaller font for single page
-
-% Essential packages for modern design
+\LoadClass[10pt,letterpaper]{article}
 \usepackage[parfill]{parskip} 
 \usepackage{array} 
 \usepackage{ifthen} 
-\usepackage{enumitem} % Better list control
-\usepackage{tabularx} % Better table formatting
-\usepackage{calc} % For calculations
-\usepackage{amsmath} % For \boldsymbol and math symbols
-\usepackage{xcolor} % For color definitions
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{calc}
+\usepackage{amsmath}
+\usepackage{xcolor}
 
-% Hyperlink setup - ATS compliant with blue theme
+% Hyperlink setup
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -31,29 +24,27 @@
     pdfkeywords={Software Engineer, Full Stack Developer, JavaScript, React, Node.js}
 }
 
-% Define custom colors matching the reference resume
-\definecolor{namecolor}{RGB}{27,79,114}      % Deep blue for name
-\definecolor{sectioncolor}{RGB}{27,79,114}   % Deep blue for section headers
-\definecolor{linkcolor}{RGB}{46,134,171}     % Medium blue for links
-\definecolor{textcolor}{RGB}{0,0,0}          % Black for body text
+% Define custom colors
+\definecolor{namecolor}{RGB}{27,79,114}
+\definecolor{sectioncolor}{RGB}{27,79,114}
+\definecolor{linkcolor}{RGB}{46,134,171}
+\definecolor{textcolor}{RGB}{0,0,0}
 
-\pagestyle{empty} % No page numbers for ATS
+\pagestyle{empty}
 
 %----------------------------------------------------------------------------------------
 % CUSTOM COMMANDS FOR HIGHLIGHTING
 %----------------------------------------------------------------------------------------
-% Command for highlighting technical keywords with black text
 \newcommand{\techkw}[1]{\textbf{\small #1}}
 
 %----------------------------------------------------------------------------------------
 % CUSTOM SPACING AND SIZING
 %----------------------------------------------------------------------------------------
-\def\namesize{\fontsize{28}{30}\selectfont\bfseries\color{namecolor}} % Larger blue name
-\def\titlesize{\large\itshape} % Medium subtitle with elegant styling
-\def\sectionsize{\normalsize\bfseries\color{sectioncolor}} % Blue section headers
-\def\subsectionsize{\normalsize\bfseries} % Subsection headers
+\def\namesize{\fontsize{28}{30}\selectfont\bfseries\color{namecolor}}
+\def\titlesize{\large\itshape}
+\def\sectionsize{\normalsize\bfseries\color{sectioncolor}}
+\def\subsectionsize{\normalsize\bfseries}
 
-% Tight spacing definitions for single page
 \def\nameskip{\vspace{1pt}}
 \def\sectionskip{\vspace{2pt}}
 \def\subsectionskip{\vspace{1pt}}
@@ -89,15 +80,12 @@
 \def \portfolio#1{\def\@portfolio{#1}}
 \def \@portfolio {}
 
-% Modern compact header layout
 \def \printheader {
   \begin{center}
-    % Large, prominent name
     {\namesize \@name}
     
     \vspace{2pt}
     
-  % Contact info in two well-spaced lines with modern typography (increased size)
   {\normalsize
       \ifx\@email\empty\else
         \textbf{\href{mailto:\@email}{\@email}}

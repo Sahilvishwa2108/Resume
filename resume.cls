@@ -84,7 +84,7 @@
   \begin{center}
     {\namesize \@name}
     
-    \vspace{2pt}
+    \vspace{-2pt}
     
   {\normalsize
       \ifx\@email\empty\else
@@ -96,7 +96,7 @@
       \ifx\@location\empty\else
         \ $\boldsymbol{\cdot}$ \textbf{\href{https://www.google.com/maps/search/\@location}{\@location}}
       \fi
-      \\[2pt]
+      \\[0pt]
       \ifx\@linkedin\empty\else
         \href{\@linkedin}{\textbf{linkedin.com/in/sahilvishwa2108}}
       \fi
@@ -111,7 +111,7 @@
     }
   \end{center}
   
-  \vspace{3pt}
+  \vspace{1pt}
 }
 
 %----------------------------------------------------------------------------------------
@@ -166,7 +166,7 @@
   \begin{itemize}[leftmargin=12pt, itemsep=0pt, parsep=0pt]
 }{
   \end{itemize}
-  \vspace{4pt}
+  \vspace{8pt}
 }
 
 %----------------------------------------------------------------------------------------
